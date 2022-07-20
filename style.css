@@ -61,11 +61,16 @@ body, a{
 .banner-img{
     width: 581px;
     margin-right: 79px;
+    transition: transform ease 2s;
 }
 .banner-img img{
     width: 100%;
     height: 100%;
     display: block;
+    
+}
+.banner-img:hover{
+    transform: translate(50PX);
 }
 /* Main Blog */
 .main-blogs{
