@@ -16,7 +16,9 @@ body, a{
 /* Top Banner styles */
 .top-banner{
     width: 1321px;
-    display:flex;
+    display: flex;
+    flex-direction: row;
+
     margin-top: 40px;
     background: #161616;
     border-radius: 30px;
@@ -94,9 +96,6 @@ body, a{
   color: #FFFFFF;
 }
 /* single blog styles */
-.main-blogs{
-  
-}
 .main-blog{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -111,7 +110,7 @@ body, a{
     width: 100%;
 }
 .blog-btn{
-    border: 1px solid #161616;
+    border: 1px solid rgba(22, 22, 22, 0.475);
     border-radius: 5px;
    
 }
@@ -143,16 +142,17 @@ body, a{
 }
 /* footer section styles */
 footer{
-    width: 1600px;
     text-align: center;
     background-color: #161616;
     padding: 50px 0px;
+}
+.footers{
+    width: 1321px;
 }
 .footer-title{
     font-size: 40px;
     font-weight: 600;
     color: #FFFFFF;
-    
 }
 hr{
     width: 1320px;
@@ -163,14 +163,108 @@ hr{
 .footer-nav{
     width: 800px;
     display: flex;
+    justify-content: space-between;
     margin: auto;
 }
 .footer-nav li{
     list-style: none;
-    margin-right: 25px;
+    
 }
 .footer-nav li a{
     color: #B9B9B9;
     font-size: 16px;
     text-align: center;
 }
+.social-icon{
+    visibility: hidden;
+}
+
+
+/* ---------------- */
+    /* responsive */
+/* ----------------- */
+
+/* Mobail views */
+@media only screen and (max-width:688px) {
+    #container{
+        width: 90%;
+    }
+    /* Top Banner responsive */
+    .top-banner{
+        width: 100%;
+       flex-direction: column;
+       text-align: center;
+    }
+    .banner-details{
+        width: 258px;
+        margin: 0 auto;
+        padding: 30px 0px;
+    }
+    .banner-title{
+        font-size: 28px;
+    }
+    .banner-paragraph{
+        font-size: 14px;
+    }
+    .banner-img{
+        width: 300px;
+        margin: auto;
+        padding-left: 25px;
+    }
+    .btn{
+        margin: auto;
+    }
+    /* Main Blog */
+    .main-blogs{
+        margin: auto;
+    }
+    .nav-link{
+        margin-top: 20px;
+       
+        float: none;
+        margin: auto;
+        margin-bottom: 20px;
+        background: none !important;
+    }
+    .btn-link{
+        border: 1px solid #E8E8E8;
+    }
+    .main-blog{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+
+    /* footer section responsive */
+    footer{
+        width:100%;
+        background-color: #161616;
+        padding: 40px 0px;
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+     }
+     hr{
+        width: 80%;
+     }
+     .footer-nav{
+         flex-direction: column;
+         width: 60%;
+         padding-left: 0px;
+     }
+     .footer-nav li{
+        width: 100%;
+        margin: 10px 0px;
+        
+     }
+     .social-icon{
+        margin-top: 25px;
+        visibility: visible;
+     }
+     .colors{
+        color: #FFFFFF;
+        margin: 0px 10px;
+        font-size: 20px;
+     }
+}
+
+/* Tablet views */
